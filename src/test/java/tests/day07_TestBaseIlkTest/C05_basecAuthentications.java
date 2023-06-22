@@ -22,5 +22,6 @@ public class C05_basecAuthentications extends TestBase {
         //4- Basarili sekilde sayfaya girildigini dogrulayin
         WebElement basariliGirisYazisi = driver.findElement(By.tagName("p"));
         Assert.assertTrue(basariliGirisYazisi.isDisplayed());
+        bekle(3);
     }
 }
