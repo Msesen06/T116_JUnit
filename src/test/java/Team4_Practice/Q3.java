@@ -56,8 +56,6 @@ public class Q3 extends TestBase {
         // "AMAzon" yazisinin gorunur oldugunu test edin
         String sonucYazi = driver.findElement(By.id("result")).getText();
         Assert.assertTrue(sonucYazi.contains(expectedString));
-
-
     }
 
 
