@@ -1,9 +1,12 @@
 package utilities;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Set;
 
 public class ReasubleMethods extends TestBase{
@@ -30,5 +33,37 @@ public class ReasubleMethods extends TestBase{
         String dinamikXpath="//tbody/tr["+satirNo+"]/td["+sutunNo+"]";
         WebElement istenenHucredekiElement = driver.findElement(By.xpath(dinamikXpath));
         return istenenHucredekiElement.getText();
+    }
+
+    public static void tumSayfaFotoCek(WebDriver driver){
+        TakesScreenshot tss= (TakesScreenshot) driver;
+        //Dosya adını dinamik hale getirmek icin time stamp kullanalım
+        LocalDateTime ldt =LocalDateTime.now();
+        DateTimeFormatter dtf =DateTimeFormatter.ofPattern("YYMMddhhmm");
+        String dinamikDosyaYolu="target/Screenshots/Tumsayfa"+ldt.format(dtf)+".png";
+
+        File tumSayfaFoto=new File(dinamikDosyaYolu);
+        File geciciDosya=tss.getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(geciciDosya,tumSayfaFoto);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public static void webElementFotoCek(WebDriver driver,WebElement istenenElement) {
+
+        LocalDateTime ldt=LocalDateTime.now();
+        DateTimeFormatter dtf=DateTimeFormatter.ofPattern("YYMMddhhmm");
+        String dinamikDosyaYolu="target/Screenshots/Tumsayfa/WebElement"+ldt.format(dtf)+".png";
+        File webElementFoto=new File(dinamikDosyaYolu);
+        File geciciDosya=istenenElement.getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(geciciDosya,webElementFoto);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

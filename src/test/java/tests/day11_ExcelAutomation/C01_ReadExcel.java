@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class C01_ReadExcel {
@@ -19,7 +18,7 @@ public class C01_ReadExcel {
         Workbook workbook= WorkbookFactory.create(fis);
         /*
         olusturdugumuz workbook bizim excelimizi canlı olarak kullanmaz
-        19.satır calsıtıgında fisteki yani verdigimiz dosyayolunda olan exceldeki
+        19.satır calıstıgında fisteki yani verdigimiz dosya yolunda olan exceldeki
         tum bilgileri alıp bu classta olusturdugumuz workbook objesine yukler
 
 
@@ -27,7 +26,6 @@ public class C01_ReadExcel {
          workbookta bir degisiklik yaparsak ana excel degismez
          eger ana exxcelin de degismesini istiyorsak islem bitikten sonra yani
          classın en sonunda workbooktaki  yeni halini excele kaydetmemiz gerekir
-
 
          */
 
