@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import utilities.TestBase;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -46,6 +48,7 @@ public class C05_FileExists {
         String dinamikDosyaYolu=System.getProperty("user.home")+ "\\Downloads\\avatar.png";
         System.out.println(dinamikDosyaYolu);
         Assert.assertTrue(Files.exists(Paths.get(dinamikDosyaYolu)));
+
 
     }
 }

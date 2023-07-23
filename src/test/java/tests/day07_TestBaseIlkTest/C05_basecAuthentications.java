@@ -12,7 +12,7 @@ public class C05_basecAuthentications extends TestBase {
     //Html komutu : https://username:password@URL
     // Username    : admin
     //  password     : admin
-    //4- Basarili sekilde sayfaya girildigini dogrulayin
+    //4-Basarili sekilde sayfaya girildigini dogrulayin
 
     @Test
     public void test01(){

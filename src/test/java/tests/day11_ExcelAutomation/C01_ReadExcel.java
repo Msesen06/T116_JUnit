@@ -17,9 +17,9 @@ public class C01_ReadExcel {
         FileInputStream fis=new FileInputStream(dosyaYolu);
         Workbook workbook= WorkbookFactory.create(fis);
         /*
-        olusturdugumuz workbook bizim excelimizi canlı olarak kullanmaz
-        19.satır calıstıgında fisteki yani verdigimiz dosya yolunda olan exceldeki
-        tum bilgileri alıp bu classta olusturdugumuz workbook objesine yukler
+         olusturdugumuz workbook bizim excelimizi canlı olarak kullanmaz
+         19.satır calıstıgında fisteki yani verdigimiz dosya yolunda olan exceldeki
+         tum bilgileri alıp bu classta olusturdugumuz workbook objesine yukler
 
 
          Yani workbook objesi exceldeki bilgilerin bir kopyasına sahip olur

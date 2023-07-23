@@ -40,7 +40,7 @@ public class C02_DropdownMenu extends TestBase {
 
         //Biz daha once dropdown menuyu locate edip bunu kullanarak select objesi  olusturmustuk
         //ancak arama yaptırdıgımızda html kodlar yenilendigi icin eski elementleri bulamayabilir
-        //bu durumda stale element bayat element uyarısı verir
+        //bu durumda stale element (bayat element) uyarısı verir
         // yapmamız gereken yeni obje olsuturmak degil objelere yeniden deger atamak
         dropDown= driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
         select =new Select(dropDown);

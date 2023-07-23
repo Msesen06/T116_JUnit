@@ -65,7 +65,7 @@ public class C02_Cookies extends TestBase {
         //8- tum cookie’leri silin ve silindigini test edin
         driver.manage().deleteAllCookies();
         cookies=driver.manage().getCookies();
-        Assert.assertTrue(cookies.size()==0);
+        Assert.assertEquals(0,cookies.size());
         bekle(3);
     }
 
